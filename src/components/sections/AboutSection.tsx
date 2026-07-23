@@ -22,12 +22,12 @@ export function AboutSection() {
             eyebrow="Chi sono"
             title="Una presenza professionale, vicina e affidabile"
           />
-          <p className="text-left text-base leading-relaxed text-muted">
+          <p className="text-center text-base leading-relaxed text-muted lg:text-left">
             Mi chiamo Monica Ceruolo e lavoro come infermiera indipendente.
             Offro assistenza direttamente a domicilio, costruendo un rapporto
             basato sull’ascolto, sulla fiducia e sulla continuità delle cure.
           </p>
-          <p className="text-left text-base leading-relaxed text-muted">
+          <p className="text-center text-base leading-relaxed text-muted lg:text-left">
             Ogni intervento viene organizzato con attenzione alle condizioni
             della persona, alle indicazioni mediche e alle esigenze della
             famiglia.
