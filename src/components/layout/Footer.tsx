@@ -26,13 +26,13 @@ export function Footer() {
           <span>{ADDRESS_LINE2}</span>
           <a
             href={PHONE_HREF}
-            className="w-fit rounded-sm hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="w-fit self-center rounded-sm hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary lg:self-auto"
           >
             {PHONE}
           </a>
           <a
             href={EMAIL_HREF}
-            className="w-fit rounded-sm hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+            className="w-fit self-center rounded-sm hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary lg:self-auto"
           >
             {EMAIL}
           </a>
