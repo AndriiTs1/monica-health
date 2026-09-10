@@ -15,17 +15,17 @@ export function ContactSection() {
   return (
     <section
       id="contatti"
-      className="py-16 sm:py-20 lg:py-24"
+      className="py-10 sm:py-16 lg:py-20"
       aria-labelledby="contatti-heading"
     >
-      <Container className="flex flex-col gap-10 lg:max-w-3xl">
+      <Container className="flex flex-col gap-8 lg:max-w-3xl lg:gap-10">
         <SectionHeading
           id="contatti-heading"
           eyebrow="Contatti"
           title="Parliamo delle tue necessità"
           description="Per informazioni o per organizzare un primo contatto, puoi chiamare o scrivere direttamente a Monica."
         />
-        <div className="mx-auto grid w-full max-w-md gap-6 sm:max-w-xl sm:grid-cols-2 lg:mx-0 lg:max-w-none">
+        <div className="mx-auto grid w-full max-w-md gap-5 sm:max-w-xl sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:gap-6">
           <div className="flex items-start gap-3">
             <Phone className="mt-1 h-5 w-5 shrink-0 text-primary" aria-hidden="true" />
             <dl>

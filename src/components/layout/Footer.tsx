@@ -16,7 +16,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border bg-surface">
-      <Container className="flex flex-col items-center gap-6 py-12 text-center text-sm text-muted lg:items-start lg:text-left">
+      <Container className="flex flex-col items-center gap-5 py-9 text-center text-sm text-muted lg:items-start lg:py-10 lg:text-left">
         <div className="flex flex-col gap-1">
           <span className="text-base font-semibold text-foreground">{NAME}</span>
           <span>{ROLE}</span>
@@ -38,7 +38,7 @@ export function Footer() {
           </a>
           <span>RCC {RCC}</span>
         </address>
-        <div className="flex flex-col gap-2 border-t border-border pt-6 text-xs">
+        <div className="flex flex-col gap-2 border-t border-border pt-5 text-xs">
           <p>
             Le informazioni presenti sul sito non sostituiscono una valutazione
             medica.

@@ -7,17 +7,17 @@ export function ServicesSection() {
   return (
     <section
       id="servizi"
-      className="py-16 sm:py-20 lg:py-24"
+      className="py-10 sm:py-16 lg:py-20"
       aria-labelledby="servizi-heading"
     >
-      <Container className="flex flex-col gap-10">
+      <Container className="flex flex-col gap-8 lg:gap-10">
         <SectionHeading
           id="servizi-heading"
           eyebrow="Servizi"
           title="Assistenza pensata per le esigenze di ogni giorno"
           description="Un supporto professionale e umano per favorire sicurezza, autonomia e serenità nella propria casa."
         />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
           {services.map((service) => (
             <ServiceCard
               key={service.title}

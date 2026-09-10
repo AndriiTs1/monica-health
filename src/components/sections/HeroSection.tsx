@@ -11,8 +11,8 @@ const trustNotes = [
 
 export function HeroSection() {
   return (
-    <section className="relative overflow-hidden bg-background py-16 sm:py-20 lg:py-28">
-      <Container className="grid gap-12 lg:grid-cols-2 lg:items-center">
+    <section className="relative overflow-hidden bg-background py-8 sm:py-14 lg:py-24">
+      <Container className="grid gap-6 lg:grid-cols-2 lg:items-center lg:gap-12">
         <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:text-left">
           <span className="inline-flex w-fit items-center gap-2 rounded-lg border border-border bg-surface px-3.5 py-1.5 text-sm font-semibold tracking-wide text-primary uppercase">
             <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
@@ -60,7 +60,7 @@ export function HeroSection() {
             className="absolute -inset-6 rounded-[2.5rem] bg-[radial-gradient(circle_at_25%_20%,rgba(231,220,207,0.55),transparent_60%),radial-gradient(circle_at_80%_85%,rgba(47,74,63,0.10),transparent_55%)]"
             aria-hidden="true"
           />
-          <div className="relative flex w-full flex-col gap-6 rounded-xl border border-border bg-surface p-8 shadow-sm">
+          <div className="relative flex w-full flex-col gap-4 rounded-xl border border-border bg-surface p-5 shadow-sm lg:gap-6 lg:p-8">
             <div className="flex items-center justify-between gap-4">
               <span className="flex h-14 w-14 items-center justify-center rounded-lg bg-primary text-primary-foreground">
                 <HeartPulse className="h-7 w-7" aria-hidden="true" />

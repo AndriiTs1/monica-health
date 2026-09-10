@@ -6,16 +6,16 @@ export function FaqSection() {
   return (
     <section
       id="faq"
-      className="bg-surface py-16 sm:py-20 lg:py-24"
+      className="bg-surface py-10 sm:py-16 lg:py-20"
       aria-labelledby="faq-heading"
     >
-      <Container className="flex flex-col gap-10">
+      <Container className="flex flex-col gap-8 lg:gap-10">
         <SectionHeading id="faq-heading" eyebrow="FAQ" title="Domande frequenti" />
-        <div className="mx-auto flex w-full max-w-2xl flex-col gap-4 lg:mx-0 lg:max-w-none">
+        <div className="mx-auto flex w-full max-w-2xl flex-col gap-3 lg:mx-0 lg:max-w-none lg:gap-4">
           {faqItems.map((item) => (
             <details
               key={item.question}
-              className="group rounded-lg border border-border bg-background p-5"
+              className="group rounded-lg border border-border bg-background p-4 lg:p-5"
             >
               <summary className="cursor-pointer list-none text-base font-medium text-foreground focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
                 {item.question}
