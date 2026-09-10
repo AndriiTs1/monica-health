@@ -4,6 +4,7 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { InsuranceAreaSection } from "@/components/sections/InsuranceAreaSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
+import { ReviewsSection } from "@/components/sections/ReviewsSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { StructuredData } from "@/components/seo/StructuredData";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <AboutSection />
         <ProcessSection />
         <InsuranceAreaSection />
+        <ReviewsSection />
         <FaqSection />
         <ContactSection />
       </main>

@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
-import { Header } from "@/components/layout/Header";
-import { Footer } from "@/components/layout/Footer";
 import { SITE, SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "@/lib/constants";
 import "./globals.css";
 
@@ -63,15 +61,18 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Deliberately minimal and route-agnostic: <html>/<body>, fonts and
+  // shared metadata only. Which chrome a route gets (public Header/Footer
+  // vs. the bare admin shell) is decided purely by which layout.tsx file
+  // is on disk for that route segment — src/app/(public)/layout.tsx for
+  // the public site, src/app/admin/layout.tsx for the admin panel — never
+  // by a runtime check here. That's what makes it immune to the App
+  // Router persisting a stale layout instance across client-side
+  // back/forward navigation between the two sections.
   return (
     <html lang="it" className={`${manrope.variable} h-full`}>
       <body className="flex min-h-full flex-col bg-background font-sans text-foreground antialiased">
-        <a href="#contenuto" className="skip-link">
-          Vai al contenuto
-        </a>
-        <Header />
         {children}
-        <Footer />
       </body>
     </html>
   );
