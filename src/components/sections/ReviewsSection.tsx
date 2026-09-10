@@ -1,7 +1,6 @@
-import { Star } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ReviewForm } from "@/components/sections/ReviewForm";
+import { ReviewsCarousel } from "@/components/sections/ReviewsCarousel";
 import { createClient } from "@/lib/supabase/server";
 
 type Review = {
@@ -12,6 +11,10 @@ type Review = {
   published_at: string | null;
 };
 
+// Capped, not unbounded — comfortably covers real-world review volume
+// (tens of reviews) without an unbounded query against a public table.
+const MAX_REVIEWS = 60;
+
 export async function ReviewsSection() {
   const supabase = await createClient();
 
@@ -20,7 +23,7 @@ export async function ReviewsSection() {
     .select("id, author_name, rating, content, published_at")
     .eq("status", "published")
     .order("published_at", { ascending: false })
-    .limit(3);
+    .limit(MAX_REVIEWS);
 
   const reviews = (!error && data ? data : []) as Review[];
 
@@ -56,43 +59,8 @@ export async function ReviewsSection() {
       className="py-10 sm:py-16 lg:py-20"
       aria-labelledby="recensioni-heading"
     >
-      <Container className="flex flex-col gap-8 lg:gap-10">
-        <SectionHeading
-          id="recensioni-heading"
-          eyebrow="Recensioni"
-          title="Cosa dicono i pazienti"
-        />
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
-          {reviews.map((review) => (
-            <article
-              key={review.id}
-              className="flex flex-col gap-4 rounded-lg border border-border bg-surface p-5 shadow-sm lg:p-6"
-            >
-              <div
-                className="flex gap-1"
-                aria-label={`${review.rating} stelle su 5`}
-              >
-                {Array.from({ length: 5 }).map((_, index) => (
-                  <Star
-                    key={index}
-                    className={`h-4 w-4 ${
-                      index < review.rating
-                        ? "fill-current text-primary"
-                        : "text-border"
-                    }`}
-                    aria-hidden="true"
-                  />
-                ))}
-              </div>
-              <p className="text-base leading-relaxed text-muted">
-                &ldquo;{review.content}&rdquo;
-              </p>
-              <p className="text-sm font-medium text-foreground">
-                {review.author_name}
-              </p>
-            </article>
-          ))}
-        </div>
+      <Container className="flex flex-col gap-6 lg:gap-8">
+        <ReviewsCarousel reviews={reviews} />
         <div className="flex justify-center lg:justify-start">
           <ReviewForm />
         </div>
