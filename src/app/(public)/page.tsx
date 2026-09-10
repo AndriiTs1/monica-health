@@ -1,4 +1,3 @@
-import { AboutSection } from "@/components/sections/AboutSection";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { HeroSection } from "@/components/sections/HeroSection";
@@ -15,7 +14,6 @@ export default function Home() {
       <main id="contenuto" className="flex-1">
         <HeroSection />
         <ServicesSection />
-        <AboutSection />
         <ProcessSection />
         <InsuranceAreaSection />
         <ReviewsSection />
