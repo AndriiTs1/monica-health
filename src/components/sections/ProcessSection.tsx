@@ -6,7 +6,7 @@ export function ProcessSection() {
   return (
     <section
       id="come-funziona"
-      className="py-10 sm:py-16 lg:py-20"
+      className="scroll-mt-[16px] py-10 sm:py-16 lg:scroll-mt-[32px] lg:py-20"
       aria-labelledby="come-funziona-heading"
     >
       <Container className="flex flex-col gap-8 lg:gap-10">
