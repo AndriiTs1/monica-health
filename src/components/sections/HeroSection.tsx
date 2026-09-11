@@ -4,15 +4,13 @@ import { Container } from "@/components/ui/Container";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { EMAIL_HREF, PHONE_HREF, RCC } from "@/lib/constants";
 
-const trustNotes = ["Contatto diretto e personale"];
-
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden bg-background py-8 sm:py-14 lg:py-14 xl:py-24">
       <Container className="grid gap-5 lg:grid-cols-[1.2fr_1fr] lg:items-stretch lg:gap-12">
-        <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:justify-between lg:gap-2 lg:text-left xl:gap-6">
+        <div className="flex flex-col items-center gap-4 text-center lg:items-start lg:justify-between lg:gap-2 lg:text-left xl:gap-6">
           {/* TOP GROUP */}
-          <div className="flex flex-col items-center gap-6 text-center lg:items-start lg:gap-2 lg:text-left xl:gap-6">
+          <div className="flex flex-col items-center gap-4 text-center lg:items-start lg:gap-2 lg:text-left xl:gap-6">
             <span className="inline-flex w-fit items-center gap-2 rounded-lg border border-border bg-surface px-3.5 py-1.5 text-sm font-semibold tracking-wide text-primary uppercase">
               <span className="h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
               Assistenza infermieristica a domicilio
@@ -80,21 +78,6 @@ export function HeroSection() {
             </a>
           </div>
 
-          {/* Mobile/tablet: short standalone trust-note right after CTA.
-              Hidden at lg+, where the same fact lives inside the compact
-              credentials block below instead — never both at once. */}
-          <ul className="-mt-2 flex flex-col gap-3 text-base text-muted lg:hidden">
-            {trustNotes.map((note) => (
-              <li key={note} className="flex items-center gap-2.5">
-                <span
-                  className="h-2 w-2 shrink-0 rounded-full bg-primary"
-                  aria-hidden="true"
-                />
-                {note}
-              </li>
-            ))}
-          </ul>
-
           {/* BOTTOM GROUP — desktop-only compact credentials area. A third
               flex child alongside TOP and MIDDLE under the column's own
               justify-between, so the leftover vertical space (column
@@ -121,7 +104,7 @@ export function HeroSection() {
           </div>
         </div>
 
-        <div className="mx-auto flex w-full max-w-xs flex-col items-center gap-3 lg:mx-0 lg:max-w-none lg:items-end">
+        <div className="-mt-3 mx-auto flex w-full max-w-xs flex-col items-center gap-3 sm:mt-0 lg:mx-0 lg:max-w-none lg:items-end">
           <div className="relative aspect-[4/5] w-full max-w-[200px] overflow-hidden rounded-xl border border-border bg-surface sm:max-w-[288px] lg:max-w-[332px] xl:max-w-[376px]">
             <Image
               src="/images/monica.png"
