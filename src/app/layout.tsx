@@ -45,11 +45,18 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
+    images: [
+      {
+        url: "/images/monica.png",
+        alt: "Monica Ceruolo — Infermiera indipendente a domicilio a Lugano",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
+    images: ["/images/monica.png"],
   },
   ...(googleSiteVerification
     ? { verification: { google: googleSiteVerification } }
