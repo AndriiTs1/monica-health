@@ -12,7 +12,7 @@ import {
 } from "@/lib/constants";
 
 const contactLinkClass =
-  "inline-flex items-center gap-2 rounded-sm text-base text-foreground transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary";
+  "inline-flex items-center gap-2 rounded-sm py-1 text-base text-foreground transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary";
 
 export function Footer() {
   const year = new Date().getFullYear();
