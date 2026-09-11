@@ -134,6 +134,7 @@ export function ReviewsCarousel({ reviews }: ReviewsCarouselProps) {
         role="region"
         aria-roledescription="carousel"
         aria-labelledby={HEADING_ID}
+        className="min-w-0 overflow-hidden [contain:layout]"
       >
         <ul
           ref={trackRef}
