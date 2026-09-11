@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [
       {
-        url: "/images/monica.png",
+        url: "/opengraph-image",
         alt: "Monica Ceruolo — Infermiera indipendente a domicilio a Lugano",
       },
     ],
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: ["/images/monica.png"],
+    images: ["/opengraph-image"],
   },
   ...(googleSiteVerification
     ? { verification: { google: googleSiteVerification } }
