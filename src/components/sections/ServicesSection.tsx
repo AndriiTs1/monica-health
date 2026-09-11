@@ -7,7 +7,7 @@ export function ServicesSection() {
   return (
     <section
       id="servizi"
-      className="py-10 sm:py-16 lg:py-20"
+      className="scroll-mt-[16px] py-10 sm:py-16 lg:scroll-mt-[32px] lg:py-20"
       aria-labelledby="servizi-heading"
     >
       <Container className="flex flex-col gap-8 lg:gap-10">
