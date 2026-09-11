@@ -1,11 +1,10 @@
 import Image from "next/image";
-import { Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { ButtonLink } from "@/components/ui/ButtonLink";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { HomeLink } from "./HomeLink";
 import { MobileMenu } from "./MobileMenu";
 import { navigation } from "@/data/navigation";
-import { PHONE, PHONE_HREF } from "@/lib/constants";
+import { PHONE, PHONE_HREF, WHATSAPP_HREF } from "@/lib/constants";
 
 export function Header() {
   return (
@@ -41,10 +40,20 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <ButtonLink href={PHONE_HREF} variant="primary">
-            <Phone className="h-4 w-4" aria-hidden="true" />
-            Chiama ora
-          </ButtonLink>
+          {/* Medium soft green — deliberately its own shade (not an
+              opacity of --primary, which read as washed-out grey-green),
+              lighter/more alive than Hero's dark "Chiama Monica" but still
+              squarely in the site's green-and-cream palette. Secondary
+              contact channel, not a second identical primary button. */}
+          <a
+            href={WHATSAPP_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-[#3f6b54] px-6 py-3 text-base font-medium text-white transition-colors hover:bg-[#345c48] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+          >
+            <WhatsAppIcon className="h-[18px] w-[18px] shrink-0" />
+            WhatsApp
+          </a>
         </div>
 
         <MobileMenu navigation={navigation} phone={PHONE} phoneHref={PHONE_HREF} />

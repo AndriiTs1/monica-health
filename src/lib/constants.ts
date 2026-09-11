@@ -65,6 +65,10 @@ export const TRUST_STATEMENT = "Riconosciuta da tutte le casse malati";
 export const PHONE = SITE.phone;
 export const PHONE_HREF = SITE.phoneHref;
 
+// wa.me needs digits only (no "tel:", no "+"), derived from the same
+// phoneHref above so the number itself is never repeated.
+export const WHATSAPP_HREF = `https://wa.me/${PHONE_HREF.replace(/^tel:\+?/, "")}`;
+
 export const EMAIL = SITE.email;
 export const EMAIL_HREF = SITE.emailHref;
 
