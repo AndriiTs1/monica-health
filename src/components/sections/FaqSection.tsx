@@ -6,7 +6,7 @@ export function FaqSection() {
   return (
     <section
       id="faq"
-      className="bg-surface py-10 sm:py-16 lg:py-20"
+      className="scroll-mt-[16px] bg-surface py-10 sm:py-16 lg:scroll-mt-[32px] lg:py-20"
       aria-labelledby="faq-heading"
     >
       <Container className="flex flex-col gap-8 lg:gap-10">
