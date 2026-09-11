@@ -16,7 +16,6 @@ export function Header() {
             alt=""
             width={44}
             height={44}
-            priority
             className="h-11 w-11 shrink-0 rounded-md object-cover"
           />
           <span className="flex flex-col leading-tight">
